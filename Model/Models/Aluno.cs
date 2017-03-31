@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace Models
 {
-    public class Curso
+    public class Aluno
     {
-        public int CursoID { get; set; }
-        public string Codigo { get; set; }
+        public int AlunoID { get; set; }
+        public string CPF { get; set; }
         public string Nome { get; set; }
-        public string Descricao { get; set; }
     }
 }
