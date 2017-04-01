@@ -28,50 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAlunos = new System.Windows.Forms.DataGridView();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvAlunos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome,
-            this.CPF});
-            this.dataGridView1.Location = new System.Drawing.Point(10, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(384, 173);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
+            this.dgvAlunos.AllowUserToAddRows = false;
+            this.dgvAlunos.AllowUserToDeleteRows = false;
+            this.dgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlunos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CPF,
+            this.Nome});
+            this.dgvAlunos.Location = new System.Drawing.Point(10, 31);
+            this.dgvAlunos.Name = "dgvAlunos";
+            this.dgvAlunos.ReadOnly = true;
+            this.dgvAlunos.Size = new System.Drawing.Size(468, 242);
+            this.dgvAlunos.TabIndex = 0;
+            this.dgvAlunos.SelectionChanged += new System.EventHandler(this.dgvAlunos_SelectionChanged);
             // 
             // CPF
             // 
+            this.CPF.DataPropertyName = "CPF";
             this.CPF.HeaderText = "CPF";
             this.CPF.Name = "CPF";
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
             // 
             // frmListagemAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 216);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(480, 285);
+            this.Controls.Add(this.dgvAlunos);
             this.Name = "frmListagemAlunos";
             this.Text = "Listagem de Alunos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmListagemAlunos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridView dgvAlunos;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
     }
 }

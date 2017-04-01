@@ -19,11 +19,16 @@ namespace Views
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroAluno cadAluno = new frmCadastroAluno(null)
-            {
-                MdiParent = this
-            };
+            frmCadastroAluno cadAluno = new frmCadastroAluno(null);
+            cadAluno.MdiParent = this;
             cadAluno.Show();
+        }
+
+        private void listagemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListagemAlunos listAlunos = new frmListagemAlunos();
+            listAlunos.MdiParent = this;
+            listAlunos.Show();
         }
     }
 }

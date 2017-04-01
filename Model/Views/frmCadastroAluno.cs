@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using Models;
 using Controllers;
+using Models;
 
 namespace Views
 {
@@ -29,8 +29,8 @@ namespace Views
         {
             AlunoID = null;
             _Aluno = null;
-            txtNome = null;
-            txtCpf = null;
+            txtCpf.Clear();
+            txtNome.Clear();            
             btnSalvar.Text = "Salvar";
         }
 

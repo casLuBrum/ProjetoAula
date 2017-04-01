@@ -26,7 +26,7 @@ namespace Controllers
         {
             foreach(Curso cur in listaCursos)
             {
-                if(cur.CursoID == id)
+                if(cur.CursoID != id)
                 {
                     return cur;
                 }
